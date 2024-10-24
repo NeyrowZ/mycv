@@ -9,31 +9,48 @@
         <link rel="stylesheet" href="public/css/style.css">
         <script src="https://kit.fontawesome.com/980878e886.js"></script>
     </head>
-    <body>
+    <body onload="load()">
         <div id="card-container" data-offset="2">
-            <div class="pg"><img src="public/assets/NeyrowZ.png"></div>
+            <div class="pg">
+                <img src="public/assets/NeyrowZ.png">
+            </div>
             <div id="card">
                 <div class="shine"></div>
                 <div class="text-block">
                     <h1>Nolan <small>FR</small></h1>
                     <h3>Java, Maven, Git, JavaScript, HTML, CSS</h3>
                     <p>
-                        I'm 18 and I am learning the programation as you can see in this webpage. I learn it by myself on the
-                        internet. Actualy my goal is to become a professional developper and spend all my time to
-                        programmaming.
+                        I'm an <span id="age">AGE</span> years old self taught software & web developer.
+                        My goal, become professional developper and spend all my days coding.
+                        In my free time I learn new languages and tools.
+                        <i>"For me coding is all about mindsed and versatility"</i>
                     </p>
-                    <button onclick="window.open('https://twitter.com/NeyrowZDev', '_blank');">
+                    <br>
+                    <button class="social" onclick="window.open('https://twitter.com/NeyrowZDev', '_blank');">
                         <i class="fa-brands fa-x-twitter"></i>
                     </button>
-                    <button onclick="window.open('https://github.com/NeyrowZ', '_blank');">
+                    <button class="social" onclick="window.open('https://github.com/NeyrowZ', '_blank');">
                         <i class="fa-brands fa-github"></i>
                     </button>
-                    <button onclick="window.open('public/assets/CV_Nolan_HAMADI_CHAREF.pdf', '_blank');">
+                    <button class="social" onclick="window.open('public/assets/CV_Nolan_HAMADI_CHAREF.pdf', '_blank');">
                         <i class="fa-solid fa-file"></i> <span>Resumé</span>
+                    </button>
+                    <br><br>
+                    <button id="music" class="music fade" onclick="">
+                        <div id="icon" class="icon">
+                            <i class="fa-solid fa-compact-disc"></i>
+                        </div>
+                        <span class="listeningTo">Listening to</span>
+                        <div class="carousel">
+                            <div class="carousel-inner">
+                                <span id="listening" class="listening"></span>
+                            </div>
+                        </div>
                     </button>
                 </div>
             </div>
         </div>
+        <script src="public/js/main.js"></script>
     </body>
 </html>
 
