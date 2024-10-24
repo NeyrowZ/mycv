@@ -1,0 +1,125 @@
+
+
+* {
+    box-sizing: border-box
+}
+
+body, html {
+    height: 100%;
+    min-height: 100%
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(#151515, #252525);
+    transform-style: preserve-3d;
+    transform: perspective(800px);
+    font-family: Consolas, monaco, monospace
+}
+
+#card-container {
+    width: 700px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -175px 0 0 -350px
+}
+
+#card {
+    animation: backAn 60s infinite;
+    color: #fff;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: url('../assets/bakground.png') 100% bottom;
+    box-shadow: 0 45px 100px rgba(0, 0, 0, .4), inset 0 0 0 1000px rgba(255, 199, 0, .5)
+}
+
+#card .text-block {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, .7)
+}
+
+#card .text-block h1 {
+    font-family: Arial Black, Arial Bold, Gadget, sans-serif;
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+#card .text-block h1 small {
+    font-size: .4em;
+    color: #ccc;
+    position: relative;
+    bottom: 10px
+}
+
+#card .text-block h3 {
+    margin: 0;
+    font-weight: 700
+}
+
+#card .text-block p {
+    font-weight: 300;
+    width: 60%
+}
+
+#card .text-block button {
+    transition: all .35s cubic-bezier(.37, .26, .35, 1);
+    border: 4px solid #fff;
+    padding: 10px;
+    background: transparent;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer
+}
+
+#card .text-block button:hover {
+    background: rgb(255, 199, 0)
+}
+
+#card-container .pg {
+    position: absolute;
+    height: 450px;
+    width: 40%;
+    right: -10px;
+    bottom: 0;
+    z-index: 2;
+}
+#card-container .pg>img {
+    height: 450px
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, .2) 60%);
+    z-index: 1
+}
+
+button {
+    color: #fff
+}
+
+@keyframes backAn {
+    0% {
+        background-size: 100%
+    }
+
+    50% {
+        background-size: 250%
+    }
+
+    100% {
+        background-size: 100%
+    }
+}
